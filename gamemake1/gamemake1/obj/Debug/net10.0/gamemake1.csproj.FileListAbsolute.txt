@@ -1,0 +1,15 @@
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\bin\Debug\net10.0\gamemake1.exe
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\bin\Debug\net10.0\gamemake1.deps.json
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\bin\Debug\net10.0\gamemake1.runtimeconfig.json
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\bin\Debug\net10.0\gamemake1.dll
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\bin\Debug\net10.0\gamemake1.pdb
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.AssemblyInfoInputs.cache
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.AssemblyInfo.cs
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.csproj.CoreCompileInputs.cache
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.sourcelink.json
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.dll
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\refint\gamemake1.dll
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.pdb
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\gamemake1.genruntimeconfig.cache
+C:\Users\user-pc\Documents\GitHub\04-oop-console-project-ejrghks1112-creator\gamemake1\gamemake1\obj\Debug\net10.0\ref\gamemake1.dll
