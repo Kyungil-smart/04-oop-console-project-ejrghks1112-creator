@@ -43,7 +43,7 @@ public class Map
         int x = 1;
         int y = 2;
         SetCell(x,y, BasicWord.PLAYER);
-        PlayerCharacter.Init(x,y);
+        player.Init(x,y);
     }
 
     public void StoneInMap(MidStone stone)
@@ -51,7 +51,7 @@ public class Map
         int x = map.GetLength(0) / 2;
         int y = map.GetLength(1) / 2;
         SetCell(x, y, BasicWord.MIDSTONE);
-        MidStone.Init(x, y);
+        stone.Init(x, y);
     }
 
     public void StoreInMap(Store store)
