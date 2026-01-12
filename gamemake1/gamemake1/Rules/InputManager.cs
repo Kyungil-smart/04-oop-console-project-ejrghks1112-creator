@@ -5,6 +5,9 @@ public class InputManager
     private PlayerCharacter _player;
     private Map _map;
     private MidStone _midstone;
+    public char checkGetCoin;
+    public char checkOnStore;
+    private char prevPos;
     
     public InputManager(PlayerCharacter _player, Map _map, MidStone _midstone)
     {
@@ -52,14 +55,47 @@ public class InputManager
         }
 
         char checkMove = _map.GetCell(nextPos.X, nextPos.Y);
+        checkGetCoin = checkMove;
+        checkOnStore = checkMove;
         if (checkMove == BasicWord.WALL ||
             checkMove == BasicWord.MIDSTONE ||
             checkMove == BasicWord.ATTACK) return false;
-
-        _map.SetCell(_player.PlayerPos.X, _player.PlayerPos.Y, BasicWord.EMPTY);
+        
+        _map.SetCell(_player.PlayerPos.X, _player.PlayerPos.Y, prevPos);
         _map.SetCell(nextPos.X, nextPos.Y,BasicWord.PLAYER);
+        
+        prevPos = checkMove;
+        
+        if (checkMove == BasicWord.STORE )
+        {
+            _map.SetCell(nextPos.X, nextPos.Y ,BasicWord.PLAYERONSTORE);
+        }
+
+        else
+        {
+            _map.SetCell(nextPos.X, nextPos.Y ,BasicWord.PLAYER);
+        }
+        
         _player.Move(nextPos);
 
         return true;
+    }
+
+    public bool GetCoin()
+    {
+        if (checkGetCoin == BasicWord.BRONZECOIN ||
+            checkGetCoin == BasicWord.SILVERCOIN ||
+            checkGetCoin == BasicWord.GOLDENCOIN)
+            return true;
+        else return false;
+    }
+
+    public bool OnStore()
+    {
+        if (checkOnStore == BasicWord.PLAYERONSTORE)
+        {
+            return true;
+        }
+        else return false;
     }
 }
