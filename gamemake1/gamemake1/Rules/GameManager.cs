@@ -33,7 +33,7 @@ public class GameManager
         IsGamming = true;
         _player = new PlayerCharacter();
         _map = new Map();
-        _midstone = new MidStone();
+        _midstone = new MidStone(_map);
         _store = new Store();
         _input = new InputManager(_player, _map, _midstone);
         

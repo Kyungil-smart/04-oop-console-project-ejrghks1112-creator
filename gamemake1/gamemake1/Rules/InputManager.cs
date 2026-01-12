@@ -27,10 +27,6 @@ public class InputManager
         char checkattack =  _map.GetCell(attackPos.X, attackPos.Y);
         if (checkattack != BasicWord.MIDSTONE) return false;
         
-        _map.SetCell(attackPos.X, attackPos.Y,BasicWord.ATTACK);
-        _map.SetCell( _midstone.StonePos.X, _midstone.StonePos.Y, BasicWord.MIDSTONE);
-        _player.Attack(attackPos);
-        
         return true;
     }
     

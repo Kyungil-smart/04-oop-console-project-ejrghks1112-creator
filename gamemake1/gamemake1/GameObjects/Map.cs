@@ -2,21 +2,22 @@
 
 public class Map
 {
-    private char[,] map = new char[20,20];
+    private char[,] _map = new char[20,20];
+    private Random rand1 = new Random();
 
     public void Init()
     {
-        for (int i = 0; i < map.GetLength(0); i++)
+        for (int i = 0; i < _map.GetLength(0); i++)
         {
-            for (int j = 0; j < map.GetLength(1); j++)
+            for (int j = 0; j < _map.GetLength(1); j++)
             {
-                if (i == 0 || j == 0 || i == map.GetLength(0) - 1 || j == map.GetLength(1) - 1)
+                if (i == 0 || j == 0 || i == _map.GetLength(0) - 1 || j == _map.GetLength(1) - 1)
                 {
-                    map[i, j] = BasicWord.WALL;
+                    _map[i, j] = BasicWord.WALL;
                 }
                 else
                 {
-                    map[i, j] = BasicWord.EMPTY;
+                    _map[i, j] = BasicWord.EMPTY;
                 }
             }
         }
@@ -24,19 +25,19 @@ public class Map
 
     public void PrintMap()
     {
-        for (int i = 0; i < map.GetLength(0); i++)
+        for (int i = 0; i < _map.GetLength(0); i++)
         {
-            for (int j = 0; j < map.GetLength(1); j++)
+            for (int j = 0; j < _map.GetLength(1); j++)
             {
-                Console.Write(map[i,j]);
+                Console.Write(_map[i,j]);
             }
 
             Console.WriteLine();
         }
     }
 
-    public char GetCell(int x, int y) => map[x, y];
-    public void SetCell(int x, int y, char value) => map[x, y] = value;
+    public char GetCell(int x, int y) => _map[x, y];
+    public void SetCell(int x, int y, char value) => _map[x, y] = value;
 
     public void PlayerInMap(PlayerCharacter player)
     {
@@ -48,18 +49,30 @@ public class Map
 
     public void StoneInMap(MidStone stone)
     {
-        int x = map.GetLength(0) / 2;
-        int y = map.GetLength(1) / 2;
+        int x = _map.GetLength(0) / 2;
+        int y = _map.GetLength(1) / 2;
         SetCell(x, y, BasicWord.MIDSTONE);
         stone.Init(x, y);
     }
 
     public void StoreInMap(Store store)
     {
-        int x = map.GetLength(0) - 2;
-        int y = map.GetLength(1) / 2;
+        int x = _map.GetLength(0) - 2;
+        int y = _map.GetLength(1) / 2;
         SetCell(x, y, BasicWord.STORE);
         Store.Init(x, y);
+    }
+    
+    public void CheckCell(out int posX, out int posY)
+    {
+        while (true)
+        {
+            posX = rand1.Next(1, 19);
+            posY = rand1.Next(1, 19);
+
+            if (_map[posX, posY] == BasicWord.EMPTY)
+                break;
+        }
     }
     
 }

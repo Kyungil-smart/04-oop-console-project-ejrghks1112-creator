@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gamemake1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62525085c5331d92f3ff74a05f284469068e7d45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e7a6304a9451b2439d6ed6d52ccd9b017ff5d00")]
 [assembly: System.Reflection.AssemblyProductAttribute("gamemake1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gamemake1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
