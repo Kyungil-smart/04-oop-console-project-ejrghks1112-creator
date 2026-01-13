@@ -26,10 +26,12 @@ public class MidStone
     public char dropCoin()
     {
         int dropChance = rand2.Next(1, 100);
-        if (dropChance <= 70)
+        if (dropChance <= 60)
             return BasicWord.BRONZECOIN;
-        else if (dropChance <= 95)
+        else if (dropChance <= 85)
             return BasicWord.SILVERCOIN;
+        else if (dropChance <= 95)
+            return BasicWord.STORE;
         else
             return BasicWord.GOLDENCOIN;
         

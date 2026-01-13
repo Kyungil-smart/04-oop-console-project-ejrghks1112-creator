@@ -12,6 +12,5 @@ public class BasicWord
     public static readonly char BRONZECOIN = '1'; // "🪙";
     public static readonly char SILVERCOIN = '2'; // "🪙";
     public static readonly char GOLDENCOIN = '3'; // "🪙";
-    public static readonly char ATTACK = 'A';
     public static readonly char PLAYERONSTORE = '@';
 }

@@ -40,9 +40,12 @@ public class GameManager
             {
                 _coins.PickupCoin();
             }
+            
+            Console.SetCursorPosition(0, 27);
             // 상점칸위에 캐릭터가 올라가면 상점으로 이동? or 상점을 오픈
             if (_input.OnStore())
             {
+               Console.WriteLine($"1234");
                 _store.InStore();
             }
             //상점에선 코인을 기반으로 물품 구매 가능?

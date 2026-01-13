@@ -15,24 +15,6 @@ public class InputManager
         this._map = _map;
         this._midstone = _midstone;
     }
-
-    public bool PlayerAttack(ConsoleKey inputKey)
-    {
-        Vector attackPos = _player.PlayerPos;
-
-        switch (inputKey)
-        {
-            case ConsoleKey.Spacebar:
-                attackPos += Vector.Right;
-                break;
-        }
-        
-        char checkattack =  _map.GetCell(attackPos.X, attackPos.Y);
-        if (checkattack != BasicWord.MIDSTONE) return false;
-        
-        return true;
-    }
-    
     
     public bool PlayerMove(ConsoleKey inputKey)
     {
@@ -55,32 +37,57 @@ public class InputManager
         }
 
         char checkMove = _map.GetCell(nextPos.X, nextPos.Y);
-        checkGetCoin = checkMove;
         checkOnStore = checkMove;
-        if (checkMove == BasicWord.WALL ||
-            checkMove == BasicWord.MIDSTONE ||
-            checkMove == BasicWord.ATTACK) return false;
+        checkGetCoin = _map.GetCell(nextPos.X, nextPos.Y);
         
+        if (checkMove == BasicWord.WALL ||
+            checkMove == BasicWord.MIDSTONE) return false;
+         
         _map.SetCell(_player.PlayerPos.X, _player.PlayerPos.Y, prevPos);
-        _map.SetCell(nextPos.X, nextPos.Y,BasicWord.PLAYER);
         
         prevPos = checkMove;
         
-        if (checkMove == BasicWord.STORE )
+        if (checkMove == BasicWord.EMPTY ||
+            checkMove == BasicWord.BRONZECOIN ||
+            checkMove == BasicWord.SILVERCOIN ||
+            checkMove == BasicWord.GOLDENCOIN)
+        {
+            _map.SetCell(_player.PlayerPos.X, _player.PlayerPos.Y, BasicWord.EMPTY);
+            _map.SetCell(nextPos.X, nextPos.Y,BasicWord.PLAYER);
+        }
+        
+        if (checkOnStore == BasicWord.STORE)
         {
             _map.SetCell(nextPos.X, nextPos.Y ,BasicWord.PLAYERONSTORE);
         }
-
+        
         else
         {
-            _map.SetCell(nextPos.X, nextPos.Y ,BasicWord.PLAYER);
+            _map.SetCell(nextPos.X, nextPos.Y,BasicWord.PLAYER);
         }
         
         _player.Move(nextPos);
 
         return true;
     }
+    
+    public bool PlayerAttack(ConsoleKey inputKey)
+    {
+        Vector attackPos = _player.PlayerPos;
 
+        switch (inputKey)
+        {
+            case ConsoleKey.Spacebar:
+                attackPos += Vector.Right;
+                break;
+        }
+        
+        char checkattack =  _map.GetCell(attackPos.X, attackPos.Y);
+        if (checkattack != BasicWord.MIDSTONE) return false;
+        
+        return true;
+    }
+    
     public bool GetCoin()
     {
         if (checkGetCoin == BasicWord.BRONZECOIN ||
