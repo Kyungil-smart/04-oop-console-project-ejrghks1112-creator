@@ -74,7 +74,7 @@ public class Store
             }
             else
             {
-                Console.SetCursorPosition(27W, 0);
+                Console.SetCursorPosition(27, 0);
                 Console.WriteLine("코인 부족으로 인한 구매 불가");
             }
         }
